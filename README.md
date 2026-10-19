@@ -4,7 +4,7 @@ Laboratorio de Alta Disponibilidad (HDR) y Recuperación ante Desastres (RSS) co
 
 Diseño e Implementación de una Arquitectura de Alta Disponibilidad y Recuperación ante Desastres con IBM Informix en Entornos Distribuidos (Linux/VirtualBox)
 1. Resumen Ejecutivo (Executive Summary)
-    • Contexto: Proyecto de Fin de Grado (Calificación: 10/10).
+    • Contexto: Proyecto de Fin de Grado.
     • Objetivo: Diseñar, desplegar y validar desde cero un entorno de bases de datos de misión crítica tolerante a fallos, simulando escenarios de producción reales del sector empresarial e institucional.
     • Tecnologías clave: IBM Informix (v12.10), Bash Scripting, Redes Linux (Ubuntu Server), SSH Keygen, VirtualBox, Arquitectura HDR (High Data Replication) y RSS (Remote Standalone Secondary).
 2. Arquitectura de la Solución
