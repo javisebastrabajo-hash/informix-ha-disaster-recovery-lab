@@ -1,0 +1,8 @@
+# ========================================================
+# Configuración de Relaciones de Confianza (/etc/hosts.equiv)
+# Entorno: Clúster Informix - Alta Disponibilidad
+# ========================================================
+# Permite la comunicación a nivel de sistema e instancia entre los nodos del clúster
+idshdr1 informix
+idshdr2 informix
+idsrss informix
