@@ -1,0 +1,23 @@
+Estos scripts están diseñados para realizar tareas de respaldo y restauración de una base de datos
+Informix.
+Configuran variables de entorno necesarias para Informix:
+  ● INFORMIXDIR: Directorio donde está instalado Informix.
+  ● INFORMIXSERVER: Define el nombre del servidor Informix.
+  ● PATH: Añade el binario de Informix al PATH.
+  ● ONCONFIG: Especifica el archivo de configuración de Informix.
+  ● PS1=[\uname -n`]'${INFORMIXSERVER}:${PWD}>'`: Personaliza el prompt de la
+  terminal.
+  ● DBMONEY=,, DBDATE=Y4MD-, CLIENT_LOCALE=es_es.8859-15,
+  DB_LOCALE=es_es.8859-15: Configura formato de moneda, fecha y localización.
+  ● KAIOON=1: Habilita el Kernel Asynchronous I/O, mejorando el rendimiento de E/S.
+
+Después se utiliza la utilidad de informix “ontape” para manejar respaldos y restauraciones de la
+base de datos.
+
+Por un lado:
+Usa ontape -r -t STDIO, para utilizar una entrada estándar (STDIO). Esto implica que el respaldo
+está hecho en otro sistema y se está restaurando desde un flujo de datos (por ejemplo, un pipe).
+
+Y por otro lado:
+ontape -s -L 0 -t STDIO | ssh infprees /home/informix/HDR. Este script hace un respaldo completo
+y lo transfiere a otro servidor (infprees) para restaurarlo de inmediato.
