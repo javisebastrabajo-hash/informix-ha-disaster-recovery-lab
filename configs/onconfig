@@ -1,3 +1,9 @@
+No voy a incluir números ni parámetros concretos. Solo voy a comentar las opciones que son relevantes, por qué lo son y por qué deberían revisarse
+y configurarse antes de lanzar una instancia.
+
+
+Parámetros generales del archivo-------------------------------------------------------------------------
+
 Rootdbs: El más fundamental de todos, alberga todas las opciones de configuración del
 rootdbs, que es crítico para el arranque y funcionamiento del sistema.
 
@@ -21,3 +27,33 @@ secuenciales en consultas.
 
 Bufferpool: es un parámetro del archivo onconfig que configura la memoria asignada para
 almacenar páginas de datos e índices en caché, mejorando el rendimiento de E/S. 
+
+
+
+Parámetros de Alta Disponibilidad y Replicación (HDR / RSS)------------------------------------------------------
+
+DRAUTO: Define el modo de conmutación automática ante caídas del nodo primario (0 para intervención manual, 1 para conmutación automática).
+
+DRINTERVAL: Especifica el intervalo de tiempo en segundos en el que se envían los registros lógicos desde el nodo primario hacia los servidores secundarios en modo asíncrono.
+
+HDR_TXN_SCOPE: Define el nivel de sincronización y visibilidad de las transacciones en el clúster HDR (como NEAR_SYNC), asegurando la consistencia de los datos antes de confirmar la transacción.
+
+DRTIMEOUT: Establece el tiempo máximo de espera en segundos antes de considerar que la conexión con el servidor secundario o de recuperación ante desastres se ha perdido.
+
+HA_FOC_ORDER: Configura el orden de prioridad de los nodos secundarios para la conmutación por error automática, tales como SDS, HDR, RSS.
+
+DRIDXAUTO: Controla si la recuperación o reconstrucción de índices rotos o desincronizados se realiza de manera automática en los nodos secundarios (1 activado, 0 desactivado).
+
+UPDATABLE_SECONDARY: Permite que el servidor secundario admita operaciones de escritura de forma limitada o redirigida, habilitando la actualización en caliente.
+
+FAILOVER_CALLBACK: Especifica la ruta del script o rutina externa que se ejecutará automáticamente en caso de un evento de conmutación por error.
+
+RSS_FLOW_CONTROL: Habilita o regula el control de flujo de red para el nodo secundario de tipo RSS, evitando la saturación del canal de transmisión.
+
+SMX_NUMPIPES: Define el número de canales o tuberías de comunicación paralela que utiliza el módulo de multiplexación de sesiones para optimizar el tráfico entre nodos.
+
+SMX_PING_INTERVAL: Establece la frecuencia en segundos de los paquetes de sondeo para comprobar el estado y la latencia de la conexión.
+
+SMX_PING_RETRY: Indica el número máximo de reintentos permitidos para las señales de sondeo de red antes de declarar el enlace como interrumpido.
+
+CLUSTER_TXN_SCOPE: Define el ámbito de consistencia transaccional y la visibilidad de los cambios dentro de un clúster distribuido.
