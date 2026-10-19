@@ -1,0 +1,8 @@
+INFORMIXDIR = Donde se aloja el directorio principal de Informix.
+INFORMIXSERVER = Como se llamrá el servidor de Informix.
+ONCONFIG = onconfig es el archivo de configuración del gestor de Informix. En el se
+encuentran todos los parámetros que podemos definir antes de lanzar una instancia del
+gestor.
+PATH= Aquí concatenamos los binarios del sistema con la ruta a los binarios de informix,
+de esta forma podremos usarlos directamente en nuestra línea de comandos para
+interactuar con el gestor.
