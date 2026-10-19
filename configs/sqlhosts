@@ -1,0 +1,7 @@
+# ========================================================
+# Archivo de configuración sqlhosts - Clúster Informix HDR/RSS
+# ========================================================
+# dbserver  nettype   hostname  servicename  options
+idshdr1     onsoctcp  idshdr1   sqlexec      s=6
+idshdr2     onsoctcp  idshdr2   sqlexec      s=6
+idsrss      onsoctcp  idsrss    sqlexec      s=6
