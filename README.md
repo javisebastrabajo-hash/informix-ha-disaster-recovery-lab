@@ -1,3 +1,4 @@
+<img width="1031" height="541" alt="HDR" src="https://github.com/user-attachments/assets/597a15ab-133e-4b03-a064-cbcc71429bc9" />
 # informix-ha-disaster-recovery-lab
 Laboratorio de Alta Disponibilidad (HDR) y Recuperación ante Desastres (RSS) con IBM Informix sobre entornos Linux/VirtualBox. (Proyecto de Fin de Grado - Calificación: 10/10).
 
