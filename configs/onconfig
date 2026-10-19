@@ -1,0 +1,23 @@
+Rootdbs: El más fundamental de todos, alberga todas las opciones de configuración del
+rootdbs, que es crítico para el arranque y funcionamiento del sistema.
+
+Servername: Define el nombre principal del servidor Informix, utilizado para identificarlo en
+conexiones y operaciones internas. (En este caso idshdr1, más adelante para los entornos
+secundario y RSS los llamaremos, idshdr2 y idsrss respectivamente)
+
+Locks: Establece el número máximo de bloqueos (locks) permitidos simultáneamente en la
+base de datos, afectando la concurrencia y el rendimiento.
+
+Multiprocesor: Es un parámetro del archivo onconfig que indica si el servidor debe usar
+múltiples CPU para procesar consultas en paralelo. (0 desactivado 1 activado).
+
+Nettype: Configura el protocolo de red, el número de hilos de red y su prioridad.
+
+Dbspacetemp: Especifica uno o más dbspaces temporales para almacenar datos
+intermedios de consultas.
+
+Optcompind: controla la estrategia del optimizador para elegir entre índices o escaneos
+secuenciales en consultas.
+
+Bufferpool: es un parámetro del archivo onconfig que configura la memoria asignada para
+almacenar páginas de datos e índices en caché, mejorando el rendimiento de E/S. 
