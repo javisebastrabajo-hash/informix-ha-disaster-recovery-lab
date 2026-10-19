@@ -1,0 +1,11 @@
+# ========================================================
+# Configuración de Conectividad SSH Segura (Claves RSA / Par de Confianza)
+# ========================================================
+# Fragmento para automatizar la ejecución remota de scripts de backup 
+# sin requerir introducción interactiva de contraseñas (necesario para Cron / Automatización N2/N3)
+
+# 1. Generación del par de claves en el nodo primario:
+#    ssh-keygen -t rsa -b 4096 -C "informix@idshdr1"
+
+# 2. Propagación de la clave pública al nodo secundario (idshdr2):
+#    ssh-copy-id -i ~/.ssh/id_rsa.pub informix@idshdr2
