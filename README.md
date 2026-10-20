@@ -24,6 +24,6 @@ Para demostrar la robustez de la arquitectura, se ejecutó una batería de prueb
     2. Simulación de Caída Abrupta: Cierre forzoso de la instancia primaria (onmode -ky) para evaluar el comportamiento ante interrupciones críticas. 
     3. Promoción de Nodo (Failover): Promoción exitosa del nodo secundario HDR a primario (onmode -d make primary), validando que la última transacción realizada se recuperó íntegramente sin pérdida de datos. 
     4. Respaldo Remoto con RSS: Verificación del rol del servidor RSS como salvaguarda ante desastres globales capaces de comprometer la infraestructura principal. 
-5. Conclusiones y Competencias Demostradas
+5. Conclusiones y Competencias Demostradas:
 Este proyecto validó con éxito que la arquitectura implementada es capaz de garantizar la continuidad de negocio (Business Continuity) y la integridad transaccional con un impacto mínimo ante caídas imprevistas.
     • Demuestra capacidad avanzada en administración de bases de datos relacionales complejas, gestión de sistemas operativos bajo consola y resolución de incidencias de nivel crítico (N2/N3), alineándose directamente con entornos de producción empresariales y de la administración pública.
